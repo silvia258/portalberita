@@ -1,6 +1,6 @@
 @props(['post', 'noDescription' => false])
 
-<div class="grid cursor-pointer gap-4 pb-4">
+<a href="{{ route('posts.show', $post) }}" class="grid cursor-pointer gap-4 pb-4">
     <div class="aspect-video overflow-hidden rounded-md">
         <img src="{{ Storage::url($post->image) }}" alt="{{ $post->title }}"
             class="hidden aspect-video object-cover transition duration-300 hover:scale-110"
@@ -18,4 +18,4 @@
             </p>
         @endif
     </div>
-</div>
+</a>

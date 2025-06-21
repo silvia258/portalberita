@@ -9,11 +9,11 @@
         class="flex w-full max-w-64 flex-col items-center space-y-4">
         @csrf
         <div class="space-y-2">
-            <input type="text" placeholder="Nama"
+            <input name="name" type="text" placeholder="Nama"
                 class="border-primary flex h-12 w-full items-center rounded-xl border-2 px-4 text-sm focus:outline-none">
-            <input type="email" placeholder="Email"
+            <input name="email" type="email" placeholder="Email"
                 class="border-primary flex h-12 w-full items-center rounded-xl border-2 px-4 text-sm focus:outline-none">
-            <input type="password" placeholder="Password"
+            <input name="password" type="password" placeholder="Password"
                 class="border-primary flex h-12 w-full items-center rounded-xl border-2 px-4 text-sm focus:outline-none">
         </div>
         <div class="flex flex-col items-center space-y-2">

@@ -32,7 +32,7 @@ class PostResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->label('Slug')
-                    ->unique(Post::class, 'slug'),
+                    ->unique(Post::class, 'slug', ignoreRecord: true),
 
                 Forms\Components\Select::make('category_id')
                     ->relationship('category', 'name')

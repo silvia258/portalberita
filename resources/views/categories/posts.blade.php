@@ -6,7 +6,7 @@
             <div class="lg:col-span-2">
                 <div class="lg:grid lg:gap-8">
                     <div class="space-y-4">
-                        <h3 class="text-primary text-xl font-bold">Berita Utama</h3>
+                        <h3 class="text-primary text-xl font-bold">Artikel Populer</h3>
                         <div class="grid gap-8 xl:grid-cols-2">
                             <div>
                                 <div class="grid grid-cols-2 gap-4 divide-y divide-primary xl:grid-cols-1">
@@ -32,29 +32,13 @@
                 <div class="space-y-8">
                     <div class="space-y-2">
                         <h3 class="text-primary text-xl font-bold">
-                            Trending Topik
+                            Rekomendasi
                         </h3>
-                        <ul class="ms-6 list-disc space-y-1.5 text-sm">
-                            @foreach ($trending as $post)
-                                <li>
-                                    <a href="#"
-                                        class="hover:text-primary transition hover:underline">{{ $post->title }}</a>
-                                </li>
+                        <div class="grid gap-8">
+                            @foreach ($recommended as $post)
+                                <x-card.post :post="$post" no-description />
                             @endforeach
-                        </ul>
-                    </div>
-                    <div class="space-y-2">
-                        <h3 class="text-primary text-xl font-bold">
-                            Terpopuler
-                        </h3>
-                        <ul class="ms-6 list-disc space-y-1.5 text-sm">
-                            @foreach ($mostPopular as $post)
-                                <li>
-                                    <a href=""
-                                        class="hover:text-primary transition hover:underline">{{ $post->title }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>
